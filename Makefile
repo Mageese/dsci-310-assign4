@@ -24,3 +24,6 @@ clean:
 	rm -rf results
 	rm -rf doc/rmd_example/rmd_example.html doc/rmd_example/rmd_example.pdf
 	rm -rf doc/jbook_example/_build
+
+report: 
+	Rscript -e "rmarkdown::render('doc/rmd_example/rmd_example.Rmd', output_dir=here::here('output'))"
